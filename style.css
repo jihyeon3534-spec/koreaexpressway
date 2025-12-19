@@ -67,7 +67,7 @@ section .announcement{
 .major_business{
     font-size:42px;
     display: flex;
-    align-items:flex-end;
+
 }
 
 section .major_business b{
@@ -77,4 +77,6 @@ section .major_business b{
 .major_business p{
     font-size: 18px;
     color: #7b7b7b;
+    padding-top: 55px;
+    margin-left: 22px;
 }
