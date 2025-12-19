@@ -7,8 +7,12 @@ img,iframe{vertical-align: top;}
 /*문서전체 공통적으로 적용할 스타일*/
 :root{
     font-family: "Pretendard Variable";
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
 }
 
 .inner{
-    max-width: 1600px; margin: 0 auto;
+    max-width: 1400px; margin: 0 auto;
 }
+
