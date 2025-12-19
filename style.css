@@ -16,3 +16,65 @@ img,iframe{vertical-align: top;}
     max-width: 1400px; margin: 0 auto;
 }
 
+ #link{
+    background: linear-gradient(to right, #134290, #0e7c78);
+}
+
+ #link ul{
+    max-width: 1400px; margin: 0 auto;
+    height:40px;
+    display: flex;
+    font-size:18px; color: #fff;
+    justify-content: flex-end;
+    font-weight: 400;
+}
+
+header{
+    position:sticky; top:0; left:0; z-index: 100;
+    width:100%;
+    backdrop-filter: blur(40px);
+    background: #fff1;
+    box-shadow: 0 4px 34px #0004;
+}
+
+header .inner{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header #gnb ul{
+    display: flex;
+}
+
+header #gnb li{
+    font-size: 24px; color:#fff;
+}
+
+section #vacation{
+    display: flex;
+}
+
+section .announcement{
+    flex-direction:row;
+}
+
+.main_view .inner{
+    display: flex;
+    height:calc(100vh - 40px);
+    background: url(./image/main_view4.jpg) no-repeat;
+}
+
+.major_business{
+    font-size:42px;
+    display: flex;
+    align-items:flex-end;
+}
+
+section .major_business b{
+    color:#134290;
+}
+
+.major_business p{
+    font-size: 18px;
+    color: #7b7b7b;
+}
