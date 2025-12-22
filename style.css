@@ -45,8 +45,8 @@ header .inner{
 }
 
 #gnb{
+    flex-grow: 1;
     margin: 0 auto;
-    justify-content: space-evenly;
 }
 
 header{
@@ -59,14 +59,12 @@ header{
 }
 
 #gnb ul{
-    margin: 0 auto;
     display: flex;
-    gap: 110px;
-    width:calc(100%-335px);
+    justify-content: space-between;
 }
 
 header #gnb li{
-    font-size: 20px; color:#134290;
+    font-size: 20px; color:#fff;
 }
 
 .menu-btn{
@@ -84,8 +82,12 @@ header #gnb li{
 .bar{
     width: 25px;
     height: 2px;
-    background-color: #134290;
+    background-color: #fff;
     border-radius: 2px;
+}
+
+header.scrolled .bar{
+    color: #134290;
 }
 
 .menu-btn:hover .bar{
@@ -94,15 +96,18 @@ header #gnb li{
 }
 
 #gnb a{
-    color: #134290;
+    color: #fff;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 800;
+}
+
+header.scrolled #gnb a{
+    color: #134290;
 }
 
 #gnb a:hover{
-    color: #134290;
+    color: #fff;
     text-decoration: underline;
-    font-weight: 800;
     box-shadow: 0 2 2 #0002;
 }
 
@@ -157,7 +162,7 @@ section .major_business b{
     width: 90%;
     max-width: 1400px;
     height: 80px;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     background: #fff1;
     box-shadow: 0 4px 34px #0004;
     display: flex;
@@ -323,8 +328,8 @@ input:checked + .item .plus-btn { display: none; }
     bottom: 0; left: 0;
     width: 35%; min-width: 440px;
     padding: 40px;
-    background: rgba(255, 255, 255, 0.2); 
-    backdrop-filter: blur(40px);
+    background:#fff1; 
+    backdrop-filter: blur(10px);
     border-radius: 0 15px 0 0;
     color: #fff;
     z-index: 3;
@@ -380,6 +385,7 @@ input:checked + .item .content-box ul li {
     margin-top: 144px;
     padding: 100px 0;
     background: url(./image/road.jpg) no-repeat center/cover;
+    background-attachment: fixed;
 }   
 
 #quick-menu .inner{
@@ -423,11 +429,24 @@ input:checked + .item .content-box ul li {
     height: 145px;
     flex: none;
     background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.4);
-    transition: 0.3s;
+    transition: 0.6s;
     overflow: hidden;
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.quick-list li:nth-child(2){transition-delay:0.05s}
+.quick-list li:nth-child(3){transition-delay:0.1s}
+.quick-list li:nth-child(4){transition-delay:0.15s}
+.quick-list li:nth-child(5){transition-delay:0.2s}
+.quick-list li:nth-child(6){transition-delay:0.25s}
+
+.quick-list.show li{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .quick-list li:hover {
