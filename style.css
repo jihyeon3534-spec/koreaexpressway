@@ -39,6 +39,11 @@ header .inner{
     height: 800;
 }
 
+#logo img{
+    width: 250px;
+    margin-right: 85px;
+}
+
 #gnb{
     margin: 0 auto;
     justify-content: space-between;
@@ -59,17 +64,44 @@ header{
 }
 
 header #gnb li{
-    font-size: 20px; color:#fff;
+    font-size: 20px; color:#134290;
 }
+
+.menu-btn{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; 
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.bar{
+    width: 25px;
+    height: 2px;
+    background-color: #134290;
+    border-radius: 2px;
+}
+
+.menu-btn:hover .bar{
+    box-shadow: 0 2 2 #0002;
+    height: 3px;
+}
+
 #gnb a{
-    color: #fff;
+    color: #134290;
     text-decoration: none;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 #gnb a:hover{
     color: #134290;
-    text-decoration: dashed;
+    text-decoration: underline;
+    font-weight: 800;
+    box-shadow: 0 2 2 #0002;
 }
 
 #main_view{
@@ -397,12 +429,12 @@ input:checked + .item .content-box ul li {
     background-color: transparent;
 } 
 
-.quick-list li:nth-child(1) .icon-box { background-image: url(./image/quickmenu_1.png) ;}    /* 미납 통행료 */
-.quick-list li:nth-child(2) .icon-box { background-image: url(./image/quickmenu_2.png) ;}    /* 민원신청 */
-.quick-list li:nth-child(3) .icon-box { background-image: url(./image/quickmenu_3.png) ;} /* 노면파손 */
-.quick-list li:nth-child(4) .icon-box { background-image: url(./image/quickmenu_4.png) ;}   /* 유실물 */
-.quick-list li:nth-child(5) .icon-box { background-image: url(./image/quickmenu_5.png) ;}   /* 정보공개 */
-.quick-list li:nth-child(6) .icon-box { background-image: url(./image/quickmenu_6.png) ;}    /* 채용공고 */
+.quick-list li:nth-child(1) .icon-box { background-image: url(./image/quickmenu_1.png) ; width: 100%}
+.quick-list li:nth-child(2) .icon-box { background-image: url(./image/quickmenu_2.png) ; width: 100%;}
+.quick-list li:nth-child(3) .icon-box { background-image: url(./image/quickmenu_3.png) ; width: 100%;}
+.quick-list li:nth-child(4) .icon-box { background-image: url(./image/quickmenu_4.png) ; width: 100%;}
+.quick-list li:nth-child(5) .icon-box { background-image: url(./image/quickmenu_5.png) ; width: 100%;}
+.quick-list li:nth-child(6) .icon-box { background-image: url(./image/quickmenu_6.png) ; width: 100%;}
 
 
 .quick-list li span {
