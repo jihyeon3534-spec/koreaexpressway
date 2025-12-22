@@ -46,7 +46,7 @@ header .inner{
 
 #gnb{
     margin: 0 auto;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 header{
@@ -59,8 +59,10 @@ header{
 }
 
 #gnb ul{
+    margin: 0 auto;
     display: flex;
-    gap:110px
+    gap: 110px;
+    width:calc(100%-335px);
 }
 
 header #gnb li{
@@ -149,39 +151,64 @@ section .major_business b{
 
 #notification{
     position: absolute;
-    bottom: 0; /* 맨 아래 붙임 */
+    bottom: 0;
     left: 50%;
-    transform: translateX(-50%); /* 가로 중앙 정렬 */
+    transform: translateX(-50%);
     width: 90%;
     max-width: 1400px;
     height: 80px;
-    background: #fff; /* 반투명 검정 배경 */
+    backdrop-filter: blur(40px);
+    background: #fff1;
+    box-shadow: 0 4px 34px #0004;
     display: flex;
     align-items: center;
     border-radius: 15px 15px 0 0;
     overflow: hidden;
 }
 
-#notification img{
-    margin-right: 16px;
+#notification .noty_title {
+    background: #fff;
+    color: #134290;
+    height: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#notification .noty_title h2{
+    font-size: 20px;
+    font-weight: 800;
 }
 
 .plug-up{
-    margin-left: 76px;
-    
+    flex: 1;
 }
 
 .plug-up ul{
     display: flex;
-}
-
-.plug-up ul li{
-    display: flex;
+    justify-content: space-evenly;  
+    list-style: none;
     align-items: center;
 }
 
-.plug-up h3{
+.plug-up ul li{
+    font-size: 16px;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.status {
+    display: inline-block;
+    padding: 4px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 14px;
     margin-right: 10px;
+}
+
+.red{
+    background: #F11406;
 }
 
 
@@ -250,7 +277,7 @@ section .major_business b{
 }
 
 .item1::before { background-image: url(./image/major_business1.png); }
-.item2::before { background-image: url(./image/major_business2.png); }
+.item2::before { background-image: url(./image/major_business2_1.png); }
 .item3::before { background-image: url(./image/major_business3.png); }
 .item4::before { background-image: url(./image/major_business4.png); }
 .item5::before { background-image: url(./image/major_business5.png); }
