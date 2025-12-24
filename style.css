@@ -766,22 +766,19 @@ input:checked + .item .content-box ul li {
 #famous_place .swiper-button-prev,
 #famous_place .swiper-button-next{
     position: absolute;
-    transform: translateY(-50%);
     z-index: 10;
     top:50%;
     color: #134290;
     width: 50px;
     height: 50px;
-    background: #fff1;
-    backdrop-filter: blur(10px);
 }
 
 #famous_place .swiper-button-prev{
-    left: 0;
+    left: -120px;
 }
 
 #famous_place .swiper-button-next{
-    right:0;
+    right: -120px;
 }
 
 .title{
@@ -1171,17 +1168,146 @@ input:checked + .item .content-box ul li {
 
 
 
+
 #report{
     width: 100%;
     margin-top: 160px;
     padding: 100px 0;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 #report .title{
     margin-bottom: 55px;
+
 }
 
-.report_logo ul{
+
+.control-btns .btn_pause{
+    position: relative;
+}
+
+.report_logo .swiper-wrapper li{
     display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.swiper-pagination-fraction {
+    position: static;
+    width: auto;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.report_ctrl {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.report_logo img {
     width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+.report_logo {
+    overflow: hidden; 
+}
+
+
+
+
+
+
+
+
+
+#banner ul{
+    display: flex;
+    gap: 50px;
+}
+
+#banner{
+    width: 1400px;
+    margin: 0 auto;
+}
+
+
+
+#individual{
+    width:1400px;
+    margin: 0 auto;
+    margin-top: 85px;
+    
+}
+
+
+#individual ul{
+    display: flex;
+    gap: 5px; 
+}
+
+
+#individual ul a{
+    text-decoration: none;
+    color: #7b7b7b;
+}
+
+#individual ul li{
+    font-size: 16px;
+    transition: .3s;
+    white-space: nowrap;
+}
+
+#individual ul li span{
+    color: #134290;
+}
+
+#individual .inner hr{
+    border: none;
+    border-top: 1px solid #ddd;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 12px;
+
+}
+
+
+
+#foot{
+    width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    height: 150px;
+    align-items: center;
+}
+
+#foot .tag{
+   display: flex;
+   gap: 50px;
+   align-items:flex-start;
+}
+
+#foot img{
+    width: 150px;
+}
+
+#foot .copyright{
+    font-size: 12px;
+    color: #7b7b7b;
+}
+#foot .promote{
+    margin-left:auto ;
+}
+#foot .promote ul{
+    display: flex;
+}
+
+#foot .promote ul img{
+    width: 37px;
+    margin-right: 15px;
 }

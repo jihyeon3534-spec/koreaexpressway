@@ -588,7 +588,16 @@
                     <p>투명한 경영과 청렴한 공공정보를 한눈에 확인하세요</p>
                 </div><!--end:.title-->
                 <div class="report_logo">
-                    <ul>
+                    <div class="swiper-pagination"></div>
+
+                    <div class="control-btns">
+                        <button type="button" class="btn_pause">일시정지</button>
+                        <button type="button" class="swiper-button-prev">이전</button>
+                        <button type="button" class="swiper-button-next">다음</button>
+                    </div>
+                    </div>
+                    <div class="report_logo swiper">
+                    <ul class="swiper-wrapper">
                         <li class="report1"><img src="./image/report1.jpg" alt="알림"></li>
                         <li class="report1"><img src="./image/report2.jpg" alt="알림"></li>
                         <li class="report1"><img src="./image/report3.jpg" alt="알림"></li>
@@ -598,8 +607,8 @@
                         <li class="report1"><img src="./image/report7.jpg" alt="알림"></li>
                         <li class="report1"><img src="./image/report8.jpg" alt="알림"></li>
                         <li class="report1"><img src="./image/report9.jpg" alt="알림"></li>
-                        <li class="report1"><img src="./image/report10.jpg" alt="알림"></li>
                     </ul>
+                </div>
                 </div>
             </div>
         </section>
@@ -610,38 +619,38 @@
                 <ul class="banner_list">
                     <li>
                         <a href="#">
-                            <div class="report_logo1">
+                            <div class="report_logo 1">
                                 <img src="./image/logo_1.png" alt="국민안전교육플랫폼">
                             </div>
                     </li>
                     <li>
                         <a href="#">
-                            <div class="report_logo2">
+                            <div class="report_logo 2">
                                 <img src="./image/logo_2.png" alt="국민참여예산">
                             </div>
                     </li>
                     <li>
                         <a href="#">
-                            <div class="report_logo3">
+                            <div class="report_logo 3">
                                 <img src="./image/logo_3.png" alt="문서24">
                             </div>
                     </li>
                     <li>
                         <a href="#">
-                            <div class="report_logo4">
+                            <div class="report_logo 4">
                                 <img src="./image/logo_4.png" alt="조달청">
                             </div>
                     </li>
                     <li>
                         <a href="#">
-                            <div class="report_logo5">
+                            <div class="report_logo 5">
                                 <img src="./image/logo_5.png" alt="국토교통부">
                             </div>
                     </li>
                     <li>
                         <a href="#">
                             <div class="report_logo6">
-                                <img src="./image/logo_6.png" alt="안전신문고">
+                                <img src="./image/logo_6.png.jpg" alt="안전신문고">
                             </div>
                     </li>
                     </ul>
@@ -649,28 +658,34 @@
     </main>
 
     <footer>
-        <div class="inner">
-            <ul>
-                <li>개인정보처리방침 | </li>
-                <li>개인위치정보처리방침 | </li>
-                <li>영상기기 운영관리방침 | </li>
-                <li>이메일 집단 수집 거부  |</li>
-                <li>찾아오시는 길 | </li>
-                <li>배너방 | </li>
-                <li>한국도로공사 관련 사이트 + | </li>
-                <li>민자고속도로 바로가기 + | </li>
-            </ul>
+        <div id="individual">
+            <div class="inner">
+                <hr>
+                <ul>
+                    <li><a href="#"><span>개인정보처리방침 | </span></a></li>
+                    <li><a href="#">개인위치정보처리방침 | </a></li>
+                    <li><a href="#">영상기기 운영관리방침 | </a></li>
+                    <li><a href="#">이메일 집단 수집 거부  | </a></li>
+                    <li><a href="#">찾아오시는 길 | </a></li>
+                    <li><a href="#">배너방 | </a></li>
+                    <li><a href="#">한국도로공사 관련 사이트 + | </a></li>
+                    <li><a href="#">민자고속도로 바로가기 + | </a></li>
+                </ul>
+                <hr>
+            </div>
         </div>
 
-        <div>
-           <div><img src="./image/logo_black.png" alt="한국도로공사 흑백로고"></div>
-           <div class="tag_end">
-                <ul class="copyright">
-                    <li>우) 39660 경상북도 김천시 혁신8로 77(율곡동, 한국도로공사)</li>
-                    <li>COPYRIGHT © 2014 Korea Expressway Corporation. All Rights reserved.</li>
-                </ul>
+        <div id="foot">
+            <div class="tag">
+                <p><img src="./image/logo_black.png" alt="한국도로공사 흑백로고"></p>
+                <div class="tag_end">
+                        <ul class="copyright">
+                            <li>우) 39660 경상북도 김천시 혁신8로 77(율곡동, 한국도로공사)</li>
+                            <li>COPYRIGHT © 2014 Korea Expressway Corporation. All Rights reserved.</li>
+                        </ul>
+                </div>
            </div>
-           <div>
+           <div class="promote">
             <ul class="logo">
                 <li><img src="./image/youtube.png" alt="유튜브"></li>
                 <li><img src="./image/instagram.png" alt="인스타그램"></li>
@@ -808,6 +823,49 @@ radioButtons.forEach(radio => {
 document.querySelector('#a1').dispatchEvent(new Event('change'));
 
 
+
+
+
+
+const reportSwiper = new Swiper('.report_logo', {
+    // 1. 가로 방향 설정 (제공된 이미지 기준)
+    direction: 'horizontal', 
+    loop: true,              // 무한 반복
+    
+    // 2. 한 번에 보여줄 카드 개수와 간격
+    slidesPerView: 4,        // 이미지처럼 4개씩 노출
+    spaceBetween: 25,        // 카드 사이 간격(px)
+
+    // 3. 자동 재생 설정
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+
+    // 4. 페이지 번호 설정 (17 / 20 형태)
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',    // 숫자/전체숫자 형식
+    },
+
+    // 5. 화살표 네비게이션
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
+// 일시정지 버튼 클릭 이벤트 (이미지 내 || 버튼 구현용)
+const btnPause = document.querySelector('.btn_pause');
+btnPause.addEventListener('click', function() {
+    if (this.classList.contains('on')) {
+        reportSwiper.autoplay.start();
+        this.classList.remove('on');
+    } else {
+        reportSwiper.autoplay.stop();
+        this.classList.add('on');
+    }
+});
     </script>
 
 </body>
