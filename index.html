@@ -457,24 +457,18 @@
                             </div>
                         </div>
                     </div>
-
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
                         <div class="swiper-pagination"></div>
-                
-                    <div class="view all">
-                        <a href="#">전체보기</a>
-                    </div>
                 </div>
-
             </div>
         </section>
         
 
-        <section>
+        <section id="communication">
             <div class="inner">  
                 <div class="title">
-                    <h2><p>고객소통</p></h2>
+                    <h2><p>고객소통</p></h2><br>
                     <p>한국도로공사는 국민의 의견을 반영해 투명하게 소통하며 안전한 고속도로 서비스를 제공하겠습니다.</p>
                 </div><!--end:.title-->
                 
@@ -628,63 +622,56 @@
 
 
      // 1) Swiper 초기화
-  const famousSwiper = new Swiper(".famous-swiper", {
+    const famousSwiper = new Swiper(".famous-swiper", {
     slidesPerView: 1,
-    spaceBetween: 24,
-    speed: 450,
-    loop: false, // 필터 쓸 때는 loop=false가 안정적
+    spaceBetween: 0,
+    centeredSlides: true, // 활성 슬라이드를 중앙에 배치
+    loop: false,
     observer: true,
     observeParents: true,
 
     navigation: {
-      nextEl: ".famous-swiper .swiper-button-next",
-      prevEl: ".famous-swiper .swiper-button-prev",
+      nextEl: "#famous_place .swiper-button-next",
+      prevEl: "#famous_place .swiper-button-prev",
     },
     pagination: {
       el: ".famous-swiper .swiper-pagination",
       clickable: true,
     },
-  });
+ 
+    on: {
+        // 슬라이드 변경 시 섹션 배경 이미지 교체
+        slideChange: function () {
+            const activeSlide = this.slides[this.activeIndex];
+            const imgSrc = activeSlide.querySelector('.place_img img').src;
+            document.getElementById('famous_place').style.backgroundImage = `url(${imgSrc})`;
+        }
+    }
+});
 
-  // 2) 라디오 탭 필터링
-  const radios = document.querySelectorAll('.selection input[type="radio"][name="famous"]');
-  const slides = document.querySelectorAll(".famous-swiper .swiper-slide");
 
-  function applyFilter(tabId) {
-    slides.forEach(slide => {
-      const cat = slide.dataset.category; // "tab2" ...
-      const show = (tabId === "tab1") || (cat === tabId);
+// 2) 라디오 버튼 필터링 로직
+const radios = document.querySelectorAll('.selection input[name="famous"]');
+const allSlides = Array.from(document.querySelectorAll(".famous-swiper .swiper-slide"));
+const wrapper = document.querySelector(".famous-swiper .swiper-wrapper");
 
-      // display:none 대신 hidden 속성 사용(Swiper 안정)
-      slide.hidden = !show;
+function applyFilter(tabId) {
+    // 1. 기존 슬라이드 모두 제거
+    wrapper.innerHTML = "";
+
+    const filtered = allSlides.filter(slide => {
+        return tabId === "tab1" || slide.dataset.category === tabId;
     });
 
-    // Swiper가 숨겨진 슬라이드 반영하도록 갱신
-    famousSwiper.update();
+    filtered.forEach(slide => wrapper.appendChild(slide));
+    
+    famousSwiper.update(); // Swiper 갱신
+    famousSwiper.slideTo(0); // 첫 페이지로
+}
 
-    // 첫 슬라이드로 이동(필터 바뀔 때 UX 안정)
-    famousSwiper.slideTo(0);
-  }
-
-  // 초기 필터(처음 checked 된 라디오 기준)
-  const init = document.querySelector('.selection input[name="famous"]:checked');
-  if (init) applyFilter(init.id);
-
-  // 탭 변경 시 필터 적용
-  radios.forEach(radio => {
+radios.forEach(radio => {
     radio.addEventListener("change", () => applyFilter(radio.id));
-  });
-
-  const viewAllBtn = document.querySelector(".view.all a");
-  const tabAll = document.getElementById("tab1");
-
-  if (viewAllBtn && tabAll) {
-    viewAllBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      tabAll.checked = true;
-      tabAll.dispatchEvent(new Event("change"));
-    });
-  }
+});
 
 
 
