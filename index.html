@@ -334,9 +334,9 @@
                     <p>전국 고속도로 휴게소 중 공간·환경·특징이 뛰어난 명소를 주제별로 소개합니다.</p>
                 </div><!--end:.title-->
                 <div class="selection">
-                    <input type="radio" name="famous" id="tab1">
+                    <input type="radio" name="famous" id="tab1" checked>
                     <label for="tab1">전체</label>
-                    <input type="radio" name="famous" id="tab2"checked>
+                    <input type="radio" name="famous" id="tab2">
                     <label for="tab2">건축</label>
                     <input type="radio" name="famous" id="tab3">
                     <label for="tab3">애견</label>
@@ -349,13 +349,14 @@
                 </div>
 
                 <div class="swiper famous-swiper">
+                    <div class="famous_bg"></div>
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide place_item">
-                            
+                        
+                        <div class="swiper-slide place_item" data-category="tab2">
+                            <div class="place_img">
+                                <img src="./image/rest1.jpg" alt="김제휴게소">
+                            </div>
                             <div class="place_txt">
-                                <div class="place_img">
-                                    <img src="./image/rest1.jpg" alt="김제휴게소">
-                                </div>
                                 <div class="tags">
                                     <span># 휴게소</span>
                                     <span># 최근개장</span>
@@ -370,11 +371,13 @@
                                 </ul>
                                 <a href="#" class="btn_more">자세히 보기</a>
                             </div>
+                        </div>
 
+                        <div class="swiper-slide place_item" data-category="tab3">
+                            <div class="place_img">
+                                <img src="./image/dog.jpg" alt="덕평자연휴게소">
+                            </div>
                             <div class="place_txt">
-                                <div class="place_img">
-                                    <img src="./image/dog.jpg" alt="덕평자연휴게소">
-                                </div>
                                 <div class="tags">
                                     <span># 펫파크</span>
                                     <span># 애견동반</span>
@@ -385,15 +388,17 @@
                                 <ul class="check_list">
                                     <li>반려견 테마파크 '달려라 코코'로 유명</li>
                                     <li>넓은 산책로 · 강아지 놀이터 중심 구성</li>
-                                    <li>동반 여행객을 위한 편의시설과 휴식 공간</li>
+                                    <li>동반 여행객을 위한 편의시설과 휴식공간</li>
                                 </ul>
                                 <a href="#" class="btn_more">자세히 보기</a>
                             </div>
+                        </div>
 
+                        <div class="swiper-slide place_item" data-category="tab4">
+                            <div class="place_img">
+                                <img src="./image/cow.jpg" alt="횡성휴게소">
+                            </div>
                             <div class="place_txt">
-                                <div class="place_img">
-                                    <img src="./image/cow.jpg" alt="횡성휴게소">
-                                </div>
                                 <div class="tags">
                                     <span># 맛집</span>
                                     <span># 한우특화</span>
@@ -406,52 +411,57 @@
                                     <li>간식/식사로 ‘한우떡더덕스테이크’ 등 지역 특화 메뉴</li>
                                     <li>판매량·인지도 기반 “인기 메뉴”로 자주 언급되는 곳</li>
                                 </ul>
-                                <a href="#" class="">자세히 보기</a>
+                                <a href="#" class="btn_more">자세히 보기</a>
                             </div>
+                        </div>
 
+                        <div class="swiper-slide place_item" data-category="tab5">
+                            <div class="place_img">
+                                <img src="./image/wind.jpg" alt="내린천휴게소">
+                            </div>
                             <div class="place_txt">
-                                <div class="place_img">
-                                    <img src="./image/wind.jpg" alt="내린천휴게소">
-                                </div>
                                 <div class="tags">
                                     <span># 물멍</span>
                                     <span># 전망맛집</span>
                                     <span># 옥상전망대</span>
                                 </div>
                                 <h3>내린천휴게소(양양방향)</h3>
-                                <p class="sub_tit">계곡 풍광 보며 쉬는 ‘뷰’ 강한 휴게소</p>
+                                <p class="sub_tit">계곡 풍광 보면 쉬는 '뷰' 휴게소</p>
                                 <ul class="check_list">
                                     <li>산세와 계곡 풍광이 강점</li>
-                                    <li>옥상 전망대에서 탁 트인 뷰 감상 포인트</li>
+                                    <li>상 전망대에서 탁 트인 뷰 감상 포인트</li>
                                     <li>산책하기 좋은 공간 구성</li>
                                 </ul>
                                 <a href="#" class="btn_more">자세히 보기</a>
                             </div>
+                        </div>
 
+                        <div class="swiper-slide place_item" data-category="tab6">
+                            <div class="place_img">
+                                <img src="./image/toilet.jpg" alt="망향휴게소">
+                            </div>
                             <div class="place_txt">
-                                <div class="place_img">
-                                    <img src="./image/toilet.jpg" alt="망향휴게소">
-                                </div>
                                 <div class="tags">
                                     <span># 청결</span>
                                     <span># 화장실베스트</span>
                                     <span># 쾌적</span>
                                 </div>
                                 <h3>망향휴게소(부산방향)</h3>
-                                <p class="sub_tit">‘화장실 만족도’로 유명한 청결 강자</p>
+                                <p class="sub_tit">'화장실 만족도'로 유명한 청결 휴게소</p>
                                 <ul class="check_list">
                                     <li>‘느낌 있는 화장실’ 설문에서 1위로 발표</li>
-                                    <li>2024 ‘아름다운 화장실’ 공모전 대상(대통령상) 선정</li>
+                                    <li>‘아름다운 화장실’ 공모전 대상(대통령상) 선정</li>
+                                    <li>철저한 위생 관리로 화장실 이용 만족도가 높은 휴게소</li>
                                 </ul>
                                 <a href="#" class="btn_more">자세히 보기</a>
                             </div>
                         </div>
+                    </div>
 
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
-                        <div class="swiper-button-pagination"></div>
-                    </div>
-
+                        <div class="swiper-pagination"></div>
+                
                     <div class="view all">
                         <a href="#">전체보기</a>
                     </div>
@@ -615,31 +625,70 @@
     });
 
 
-    const swiper2 = new Swiper('.famous-swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-  sliderPerView:'1',
-  spaceBetween:40,
-  conteredSlided: true,
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-    type:'fraction'
-  },
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+     // 1) Swiper 초기화
+  const famousSwiper = new Swiper(".famous-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    speed: 450,
+    loop: false, // 필터 쓸 때는 loop=false가 안정적
+    observer: true,
+    observeParents: true,
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-});
+    navigation: {
+      nextEl: ".famous-swiper .swiper-button-next",
+      prevEl: ".famous-swiper .swiper-button-prev",
+    },
+    pagination: {
+      el: ".famous-swiper .swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  // 2) 라디오 탭 필터링
+  const radios = document.querySelectorAll('.selection input[type="radio"][name="famous"]');
+  const slides = document.querySelectorAll(".famous-swiper .swiper-slide");
+
+  function applyFilter(tabId) {
+    slides.forEach(slide => {
+      const cat = slide.dataset.category; // "tab2" ...
+      const show = (tabId === "tab1") || (cat === tabId);
+
+      // display:none 대신 hidden 속성 사용(Swiper 안정)
+      slide.hidden = !show;
+    });
+
+    // Swiper가 숨겨진 슬라이드 반영하도록 갱신
+    famousSwiper.update();
+
+    // 첫 슬라이드로 이동(필터 바뀔 때 UX 안정)
+    famousSwiper.slideTo(0);
+  }
+
+  // 초기 필터(처음 checked 된 라디오 기준)
+  const init = document.querySelector('.selection input[name="famous"]:checked');
+  if (init) applyFilter(init.id);
+
+  // 탭 변경 시 필터 적용
+  radios.forEach(radio => {
+    radio.addEventListener("change", () => applyFilter(radio.id));
+  });
+
+  const viewAllBtn = document.querySelector(".view.all a");
+  const tabAll = document.getElementById("tab1");
+
+  if (viewAllBtn && tabAll) {
+    viewAllBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      tabAll.checked = true;
+      tabAll.dispatchEvent(new Event("change"));
+    });
+  }
+
+
+
+
 
     </script>
 
