@@ -581,41 +581,41 @@
             </div>
         </section>
 
-        <section id="report">
-            <div class="inner">  
-                <div class="title">
-                    <h2>알림</h2>
-                    <p>투명한 경영과 청렴한 공공정보를 한눈에 확인하세요</p>
-                </div><!--end:.title-->
-                <div class="report_logo">
-                    <div class="swiper-pagination"></div>
-
-                    <div class="control-btns">
-                        <button type="button" class="btn_pause">일시정지</button>
-                        <button type="button" class="swiper-button-prev">이전</button>
-                        <button type="button" class="swiper-button-next">다음</button>
-                    </div>
-                    </div>
-                    <div class="report_logo swiper">
-                    <ul class="swiper-wrapper">
-                        <li class="report1"><img src="./image/report1.jpg" alt="알림"></li>
-                        <li class="report1"><img src="./image/report2.jpg" alt="알림"></li>
-                        <li class="report1"><img src="./image/report3.jpg" alt="알림"></li>
-                        <li class="report1"><img src="./image/report4.jpg" alt="알림"></li>
-                        <li class="report1"><img src="./image/report5.jpg" alt="알림"></li>
-                        <li class="report1"><img src="./image/report6.png" alt="알림"></li>
-                        <li class="report1"><img src="./image/report7.jpg" alt="알림"></li>
-                        <li class="report1"><img src="./image/report8.jpg" alt="알림"></li>
-                        <li class="report1"><img src="./image/report9.jpg" alt="알림"></li>
-                    </ul>
-                </div>
-                </div>
+    <section id="report">
+    <div class="inner">
+        <div class="top_wrap">
+            <div class="title">
+                <h2>알림</h2>
+                <p>투명한 경영과 청렴한 공공정보를 한눈에 확인하세요</p>
             </div>
-        </section>
+
+            <div class="control-btns">
+                <div class="swiper-pagination swiper-pagination-report"></div> 
+                <div class="swiper-button-prev"></div> 
+                <button type="button" class="btn_pause">||</button> 
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+
+        <div class="report_logo swiper">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide"><img src="./image/report1.jpg" alt="배너1"></li>
+                <li class="swiper-slide"><img src="./image/report2.jpg" alt="배너2"></li>
+                <li class="swiper-slide"><img src="./image/report3.jpg" alt="배너3"></li>
+                <li class="swiper-slide"><img src="./image/report4.jpg" alt="배너4"></li>
+                <li class="swiper-slide"><img src="./image/report5.jpg" alt="배너5"></li>
+                <li class="swiper-slide"><img src="./image/report6.png" alt="배너6"></li>
+                <li class="swiper-slide"><img src="./image/report7.jpg" alt="배너7"></li>
+                <li class="swiper-slide"><img src="./image/report8.jpg" alt="배너8"></li>
+            </ul>
+        </div>
+    </div>
+</section>
 
 
         <section id="banner">
             <div class="inner">  
+                <div class="banner_wrapper">
                 <ul class="banner_list">
                     <li>
                         <a href="#">
@@ -654,7 +654,9 @@
                             </div>
                     </li>
                     </ul>
+                    </div>
                 </div>
+        </section>
     </main>
 
     <footer>
@@ -825,47 +827,66 @@ document.querySelector('#a1').dispatchEvent(new Event('change'));
 
 
 
+  const reportSwiper = new Swiper(".report_logo.swiper", {
+    loop: true,
+    speed: 600,
 
+    // 4개 노출
+    slidesPerView: 4,
+    spaceBetween: 20,
 
-const reportSwiper = new Swiper('.report_logo', {
-    // 1. 가로 방향 설정 (제공된 이미지 기준)
-    direction: 'horizontal', 
-    loop: true,              // 무한 반복
-    
-    // 2. 한 번에 보여줄 카드 개수와 간격
-    slidesPerView: 4,        // 이미지처럼 4개씩 노출
-    spaceBetween: 25,        // 카드 사이 간격(px)
-
-    // 3. 자동 재생 설정
+    // 자동재생
     autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
+      delay: 3500,
+      disableOnInteraction: false, // 버튼 눌러도 계속
+      pauseOnMouseEnter: true      // 마우스 올리면 잠깐 멈춤(원하면 false)
     },
 
-    // 4. 페이지 번호 설정 (17 / 20 형태)
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'fraction',    // 숫자/전체숫자 형식
-    },
-
-    // 5. 화살표 네비게이션
+    // 컨트롤 연결
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+      nextEl: "#report .swiper-button-next",
+      prevEl: "#report .swiper-button-prev",
     },
-});
+    pagination: {
+      el: ".swiper-pagination-report",
+      type: "fraction",
+      renderFraction: function (currentClass, totalClass) {
+        return `<span class="${currentClass}"></span>/<span class="${totalClass}"></span>`;
+      },
+      formatFractionCurrent: (n) => String(n).padStart(2, "0"),
+      formatFractionTotal: (n) => String(n).padStart(2, "0"),
+    },
 
-// 일시정지 버튼 클릭 이벤트 (이미지 내 || 버튼 구현용)
-const btnPause = document.querySelector('.btn_pause');
-btnPause.addEventListener('click', function() {
-    if (this.classList.contains('on')) {
-        reportSwiper.autoplay.start();
-        this.classList.remove('on');
+    // 반응형 (필요시 수치만 조정)
+    breakpoints: {
+      0:    { slidesPerView: 1.2, spaceBetween: 14 },
+      480:  { slidesPerView: 2,   spaceBetween: 16 },
+      768:  { slidesPerView: 3,   spaceBetween: 18 },
+      1024: { slidesPerView: 4,   spaceBetween: 20 },
+    },
+  });
+
+  // 일시정지/재생 토글
+  const pauseBtn = document.querySelector("#report .btn_pause");
+  let isPaused = false;
+
+  pauseBtn.addEventListener("click", () => {
+    if (!reportSwiper.autoplay) return;
+
+    if (!isPaused) {
+      reportSwiper.autoplay.stop();
+      pauseBtn.textContent = "▶";
+      pauseBtn.setAttribute("aria-label", "재생");
+      pauseBtn.classList.add("is-paused");
+      isPaused = true;
     } else {
-        reportSwiper.autoplay.stop();
-        this.classList.add('on');
+      reportSwiper.autoplay.start();
+      pauseBtn.textContent = "||";
+      pauseBtn.setAttribute("aria-label", "일시정지");
+      pauseBtn.classList.remove("is-paused");
+      isPaused = false;
     }
-});
+  });
     </script>
 
 </body>
