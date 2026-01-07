@@ -9,74 +9,153 @@
     <!--파비콘 : 60*60 png 파일로 넣기 탭창에서 홈페이지 바로 옆에 있는 아이콘ㅇㅇ-->
     <link rel="shortcut icon" href="./image/파비콘1.png">
 
-    <link rel="stylesheet" as="style" crossorigin
-        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/xeicon/2.3.3/xeicon.min.css">
+    <link rel="stylesheet" type="text/css" href="./XEIcon-master/XEIcon-master/xeicon.min.css">
     <script src="./js/EzenScrollClass.js"></script>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-
 </head>
 
 <body>
     <div id="link">
-            <ul>
-                <li>화면크기</li>
-                <li>|</li>
-                <li>ENG</li>
-            </ul>
-        </div>
-    <header>
-        
-        <div class="inner">
-
-             <div id="logo">
-                <h1><a href="#"><img src="./image/logo_bluefont.png" alt="한국도로공사 로고"></a></h1>
-            </div><!--end:#logo-->
-            <nav id="gnb">
-                <ul>
-                    <li><a href="#">공사소개</a></li>
-                    <li><a href="#">고속도로서비스</a></li>
-                    <li><a href="#">국민참여</a></li>
-                    <li><a href="#">경영·정보공개</a></li>
-                    <li><a href="#">미래혁신</a></li>
-                    <li><a href="#">
-                        <div class="menu-btn">
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                        </div>
-                    </a></li>
+    <ul class="link-inner">
+        <li class="zoom-container">
+            <button type="button" class="zoom-btn">
+                <i class="icon-zoom"></i> 화면크기
+            </button>
+            
+            <div class="zoom-layer">
+                <div class="zoom-header">화면크기 조절</div>
+                <ul class="zoom-list"> <li><button type="button"><span>가</span> 작게</button></li>
+                    <li><button type="button"><span>가</span> 보통</button></li>
+                    <li><button type="button"><span>가</span> 조금 크게</button></li>
+                    <li><button type="button"><span>가</span> 크게</button></li>
                 </ul>
-            </nav><!--end:#gnb-->
-        </div><!--/end:.inner-->
-    </header>
+                <button type="button" class="reset-btn">초기화</button>
+            </div>
+        </li>
+
+        <li class="divider">|</li>
+
+        <li>
+            <a href="#" class="link-btn">ENG</a>
+        </li>
+    </ul>
+</div>
+
+    <header>
+    <div class="inner">
+        <div id="logo">
+            <h1><a href="#"><img src="./image/logo_bluefont.png" alt="한국도로공사 로고"></a></h1>
+        </div>
+        
+        <nav id="gnb">
+            <ul>
+                <li>
+                    <a href="#" class="depth1">공사소개</a>
+                    <ul class="sub">
+                        <li><a href="#">사장</a></li>
+                        <li><a href="#">채용정보</a></li>
+                        <li><a href="#">홍보센터</a></li>
+                        <li><a href="#">연차보고서</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="#" class="depth1">고속도로서비스</a>
+                    <ul class="sub">
+                        <li><a href="#">도로·노선정보</a></li>
+                        <li><a href="#">시설안내</a></li>
+                        <li><a href="#">통행요금·결제</a></li>
+                        <li><a href="#">교통안전</a></li>
+                        <li><a href="#">하이패스</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="#" class="depth1">국민참여</a>
+                    <ul class="sub">
+                        <li><a href="#">고객현장</a></li>
+                        <li><a href="#">민원신청</a></li>
+                        <li><a href="#">보상 및 피해지원</a></li>
+                        <li><a href="#">상담문의</a></li>
+                        <li><a href="#">소통참여</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="#" class="depth1">경영·정보공개</a>
+                    <ul class="sub">
+                        <li><a href="#">정보공개 (비공개 세부기준)</a></li>
+                        <li><a href="#">사전 맞춤정보</a></li>
+                        <li><a href="#">경영·책임정보</a></li>
+                        <li><a href="#">교통·공공데이터</a></li>
+                        <li><a href="#">정보·제공관리</a></li>
+                        <li><a href="#">책임·윤리경영</a></li>
+                        <li><a href="#">상생·사회적가치</a></li>
+                        <li><a href="#">사업성과</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="#" class="depth1">미래혁신</a>
+                    <ul class="sub">
+                        <li><a href="#">미래교통기술</a></li>
+                        <li><a href="#">연구·전문기관</a></li>
+                        <li><a href="#">기술지원 플랫폼</a></li>
+                        <li><a href="#">정보보호</a></li>
+                        <li><a href="#">추진체계</a></li>
+                        <li><a href="#">추진내용</a></li>
+                        <li><a href="#">지속가능 경영보고서</a></li>
+                        <li><a href="#">ESG 경영공시</a></li>
+                        <li><a href="#">ESG 채권공시</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+           <div class="menu-btn">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+    <div class="header-bg"></div>
+</header>
 
     <main>
         <section id="main_view">
             <div class="inner">
-                    <h2>안전하고 편리한 미래교통 플랫폼 기업</h2>
-                    <p>국민과 함께 만드는 스마트 고속도로 플랫폼 열린 정보와 투명한 운영으로 실현합니다.</p>
+                <h2>안전하고 편리한 미래교통 플랫폼 기업</h2>
+                <p>국민과 함께 만드는 스마트 고속도로 플랫폼 열린 정보와 투명한 운영으로 실현합니다.</p>
             </div>
+
             <div id="notification">
+                <div class="noti_inner">
                 <div class="noty_title">
-                    <img src="./image/icon_6.png">
-                    <h2>고속도로 현 현황</h2>
+                    <img src="./image/icon_6.png" alt="아이콘">
+                    <h2>고속도로 현황</h2>
                 </div>
                 <div class="plug-up">
                     <ul>
                         <li><span class="status red">정체 8km</span>입장거봉포도(휴)부근-안성</li>
                         <li><span class="status red">정체 4km</span>기흥부근-수원</li>
                         <li><span class="status red">정체 6km</span>안성-안성휴게소부근</li>
+                        <li><span class="status red">정체 8km</span>입장거봉포도(휴)부근-안성</li>
+                        <li><span class="status red">정체 4km</span>기흥부근-수원</li>
+                        <li><span class="status red">정체 6km</span>안성-안성휴게소부근</li>
                     </ul>
+                </div>
                 </div>
             </div>
         </section>
 
-             <section id="business">
+             <section id="business" class="reveal">
             <div class="inner">  
                 <div class="title">
                     <h2><p>주요사업</p>안내</h2>
@@ -206,125 +285,137 @@
             </div>
         </section>
 
-        <section id="business">
-            <div class="inner">  
-                <div class="title">
-                    <h2>즐거운<p> 여행</p>, 긴 여운</h2>
-                    <p>여행의 중간에서 만나는 작은 쉼이 즐거운 기억으로 오래 남도록 준비했습니다.</p>
-                </div><!--end:.title-->
+    <section id="afterlike">
+    <div class="inner">
+        <div class="title">
+            <h2>즐거운 <span>여행</span>, 긴 여운</h2>
+            <p>여행의 중간에서 만나는 작은 쉼이 즐거운 기억으로 오래 남도록 준비했습니다.</p>
+        </div>
 
-                    <div class="swiper subject"> 
-                        <div class="swiper-wrapper">
+        <div class="swiper subject">
+            <div class="swiper-wrapper">
 
-                        <div class="swiper-slide vacation family">
-                            <p class="subject_title">
-                                <img src="./image/family.jpg" alt="가족여행">
-                            </p>
-                        <div class="txt_area">
-                            <h3>즐거운 여행<br>오래 남는 가족의 추억</h3>
-                            <p class="subject_btm">
-                                아이부터 어른까지 모두가 안전하게 이동할 수 있도록<br>
-                                교통정보와 휴식 공간을 한눈에 제공합니다.<br>
-                                가족여행에 꼭 필요한 정보를 미리 확인하고<br>
-                                더 편안한 여행을 준비해보세요.
-                            </p>
-                            <p class="suject_image">
-                                <img src="./image/vacation_icon.png">
-                                <a href="#">가족여행 정보 바로가기</a>
-                            </p>
-                        </div><!--end:.ext_area-->
-                        </div><!--end:.item family-->
+                <div class="swiper-slide vacation family">
+                    <p class="subject_title">
+                        <img src="./image/family.jpg" alt="가족여행">
+                    </p>
+                    <div class="txt_area">
+                        <h3>즐거운 여행<br>오래 남는 가족의 추억</h3>
+                        <p class="subject_btm">
+                            아이부터 어른까지 모두가 안전하게 이동할 수 있도록<br>
+                            교통정보와 휴식 공간을 한눈에 제공합니다.<br>
+                            가족여행에 꼭 필요한 정보를 미리 확인하고<br>
+                            더 편안한 여행을 준비해보세요.
+                        </p>
+                        <p class="suject_image">
+                            <img src="./image/vacation_icon.png" alt="아이콘">
+                            <a href="#">가족여행 정보 바로가기</a>
+                        </p>
+                    </div>
+                </div>
 
-                        <div class="swiper-slide vacation couple">
-                            <p class="subject_title">
-                                <img src="./image/couple.avif" alt="커플여행">
-                            </p>
-                        <div class="txt_area">
-                            <h3>함께하는 시간<br>더 깊어지는 둘만의 순간</h3>
-                            <p class="subject_btm">
-                                둘만의 여행이 더욱 편안할 수 있도록<br>
-                                교통정보와 휴식 공간을 한눈에 제공합니다.<br>
-                                여행에 필요한 정보를 미리 확인하고<br>
-                                여유로운 둘만의 여정을 준비해보세요.
-                            </p>
-                            <p class="suject_image">
-                                <img src="./image/vacation_icon.png">
-                                <a href="#">커플여행 정보 바로가기</a>
-                            </p>
-                        </div><!--end:.ext_area-->
-                        </div><!--end:.item couple-->
+                <div class="swiper-slide vacation couple">
+                    <p class="subject_title">
+                        <img src="./image/couple.avif" alt="커플여행">
+                    </p>
+                    <div class="txt_area">
+                        <h3>함께하는 시간<br>더 깊어지는 둘만의 순간</h3>
+                        <p class="subject_btm">
+                            둘만의 여행이 더욱 편안할 수 있도록<br>
+                            교통정보와 휴식 공간을 한눈에 제공합니다.<br>
+                            여행에 필요한 정보를 미리 확인하고<br>
+                            여유로운 둘만의 여정을 준비해보세요.
+                        </p>
+                        <p class="suject_image">
+                            <img src="./image/vacation_icon.png" alt="아이콘">
+                            <a href="#">커플여행 정보 바로가기</a>
+                        </p>
+                    </div>
+                </div>
 
-                        <div class="swiper-slide vacation friend">
-                            <p class="subject_title">
-                                <img src="./image/friend.png" alt="우정여행">
-                            </p>
-                        <div class="txt_area">
-                            <h3>함께여서 더 즐거운<br>기억에 남는 우리의 여행</h3>
-                            <p class="subject_btm">
-                                친구와 함께하는 여행이 더욱 자유로울 수 있도록<br>
-                                교통정보와 휴식 공간을 한눈에 제공합니다.<br>
-                                이동 중 필요한 정보를 미리 확인하고<br>
-                                여행의 즐거움은 더해보세요.
-                            </p>
-                            <p class="suject_image">
-                                <img src="./image/vacation_icon.png">
-                                <a href="#">우정여행 정보 바로가기</a>
-                            </p>
-                        </div><!--end:.ext_area-->
-                        </div><!--end:.item couple-->
+                <div class="swiper-slide vacation friend">
+                    <p class="subject_title">
+                        <img src="./image/friend.png" alt="우정여행">
+                    </p>
+                    <div class="txt_area">
+                        <h3>함께여서 더 즐거운<br>기억에 남는 우리의 여행</h3>
+                        <p class="subject_btm">
+                            친구와 함께하는 여행이 더욱 자유로울 수 있도록<br>
+                            교통정보와 휴식 공간을 한눈에 제공합니다.<br>
+                            이동 중 필요한 정보를 미리 확인하고<br>
+                            여행의 즐거움은 더해보세요.
+                        </p>
+                        <p class="suject_image">
+                            <img src="./image/vacation_icon.png" alt="아이콘">
+                            <a href="#">우정여행 정보 바로가기</a>
+                        </p>
+                    </div>
+                </div>
 
-                        <div class="swiper-slide vacation couple">
-                            <p class="subject_title">
-                                <img src="./image/healing.jpg" alt="힐링여행">
-                            </p>
-                        <div class="txt_area">
-                            <h3>잠시 멈추는 시간<br>몸과 마음이 쉬어가는 여행</h3>
-                            <p class="subject_btm">
-                                조용한 쉼이 필요한 여행을 위해<br>
-                                교통정보와 휴식 공간을 한눈에 제공합니다.<br>
-                                이동에 대한 걱정은 줄이고<br>
-                                여유로운 힐링 여행을 준비해보세요.
-                            </p>
-                            <p class="suject_image">
-                                <img src="./image/vacation_icon.png">
-                                <a href="#">힐링여행 정보 바로가기</a>
-                            </p>
-                        </div><!--end:.ext_area-->
-                        </div><!--end:.item couple-->
+                <div class="swiper-slide vacation healing">
+                    <p class="subject_title">
+                        <img src="./image/healing.jpg" alt="힐링여행">
+                    </p>
+                    <div class="txt_area">
+                        <h3>잠시 멈추는 시간<br>몸과 마음이 쉬어가는 여행</h3>
+                        <p class="subject_btm">
+                            조용한 쉼이 필요한 여행을 위해<br>
+                            교통정보와 휴식 공간을 한눈에 제공합니다.<br>
+                            이동에 대한 걱정은 줄이고<br>
+                            여유로운 힐링 여행을 준비해보세요.
+                        </p>
+                        <p class="suject_image">
+                            <img src="./image/vacation_icon.png" alt="아이콘">
+                            <a href="#">힐링여행 정보 바로가기</a>
+                        </p>
+                    </div>
+                </div>
 
-                        <div class="swiper-slide vacation couple">
-                            <p class="subject_title">
-                                <img src="./image/experience.jpg" alt="체험여행">
-                            </p>
-                        <div class="txt_area">
-                            <h3>새로운 경험<br>기억으로 남는 여정</h3>
-                            <p class="subject_btm">
-                                다양한 체험이 있는 여행을 위해<br>
-                                교통정보와 휴식 공간을 한눈에 제공합니다.<br>
-                                이동 경로와 휴식 정보를 미리 확인하고<br>
-                                체험 중심의 여행을 더욱 알차게 즐겨보세요.
-                            </p>
-                            <p class="suject_image">
-                                <img src="./image/vacation_icon.png">
-                                <a href="#">체험여행 정보 바로가기</a>
-                            </p>
-                        </div><!--end:.ext_area-->
-                        </div><!--end:.item couple-->
+                <div class="swiper-slide vacation experience">
+                    <p class="subject_title">
+                        <img src="./image/experience.jpg" alt="체험여행">
+                    </p>
+                    <div class="txt_area">
+                        <h3>새로운 경험<br>기억으로 남는 여정</h3>
+                        <p class="subject_btm">
+                            다양한 체험이 있는 여행을 위해<br>
+                            교통정보와 휴식 공간을 한눈에 제공합니다.<br>
+                            이동 경로와 휴식 정보를 미리 확인하고<br>
+                            체험 중심의 여행을 더욱 알차게 즐겨보세요.
+                        </p>
+                        <p class="suject_image">
+                            <img src="./image/vacation_icon.png" alt="아이콘">
+                            <a href="#">체험여행 정보 바로가기</a>
+                        </p>
+                    </div>
+                </div>
 
-                        <div class="marquee">
-                            <span class="text-marquee">KOREA EXPRESSWAY KOREA EXPRESSWAY</span>
-                        </div>
+            </div> <div class="swiper-control">
+                <div class="swiper-button-prev">
+                    <i class="xi-long-arrow-left"></i>
+                </div>
+                
+                <div class="control-txt">
+                    <span>Prev</span>
+                    <span class="line">|</span>
+                    <span>Next</span>
+                </div>
+                
+                <div class="swiper-button-next">
+                    <i class="xi-long-arrow-right"></i>
+                </div>
+            </div>
 
-                        <div class="swiper-control">
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                            <div class="swiper-button-next"></div>
-                        </div>
+            <div class="marquee">
+    <div class="marquee-inner">
+        <span class="text-marquee">KOREA EXPRESSWAY</span>
+        <span class="text-marquee">KOREA EXPRESSWAY</span>
+    </div>
+</div>
 
-                        </div><!--end:.subject-->
-                        </div>
-                    </div><!--end:.inner-->
-                    </section><!--end:#business-->
+        </div></div></section>
+
+
 
 
         <section id="famous_place">
@@ -465,7 +556,7 @@
         </section>
         
 
-        <section id="communication">
+        <section id="communication" class="reveal">
             <div class="inner">  
                 <div class="title">
                     <h2><p>고객소통</p></h2><br>
@@ -551,7 +642,7 @@
                 </div>
         </section>
 
-        <section id="help_center">
+        <section id="help_center" class="reveal">
             <div class="inner">  
                 <div class="title">
                     <h2>다른 <p>도움</p>이 필요하신가요?</h2>
@@ -589,36 +680,37 @@
                 <p>투명한 경영과 청렴한 공공정보를 한눈에 확인하세요</p>
             </div>
 
-            <div class="control-btns">
-                <div class="swiper-pagination swiper-pagination-report"></div> 
-                <div class="swiper-button-prev"></div> 
-                <button type="button" class="btn_pause">||</button> 
-                <div class="swiper-button-next"></div>
+           <div class="control-btns">
+                <div class="swiper-pagination-report"></div>
+                <div class="btn-group">
+                    <button type="button" class="swiper-button-prev-report">
+                        <i class="xi-angle-left"></i>
+                    </button>
+                    <button type="button" class="btn_pause">
+                        <i class="xi-pause"></i>
+                    </button>
+                    <button type="button" class="swiper-button-next-report">
+                        <i class="xi-angle-right"></i>
+                    </button>
+                </div>
             </div>
         </div>
 
         <div class="report_logo swiper">
             <ul class="swiper-wrapper">
-                <li class="swiper-slide"><img src="./image/report1.jpg" alt="배너1"></li>
+                <li class="swiper-slide"><img src="./image/report1.png" alt="배너1"></li>
                 <li class="swiper-slide"><img src="./image/report2.jpg" alt="배너2"></li>
-                <li class="swiper-slide"><img src="./image/report3.jpg" alt="배너3"></li>
+                <li class="swiper-slide"><img src="./image/report3.png" alt="배너3"></li>
                 <li class="swiper-slide"><img src="./image/report4.jpg" alt="배너4"></li>
                 <li class="swiper-slide"><img src="./image/report5.jpg" alt="배너5"></li>
-                <li class="swiper-slide"><img src="./image/report6.png" alt="배너6"></li>
-                <li class="swiper-slide"><img src="./image/report7.jpg" alt="배너7"></li>
+                <li class="swiper-slide"><img src="./image/report6.jpg" alt="배너6"></li>
+                <li class="swiper-slide"><img src="./image/report7.png" alt="배너7"></li>
                 <li class="swiper-slide"><img src="./image/report8.jpg" alt="배너8"></li>
-                <li class="swiper-slide"><img src="./image/report8.jpg" alt="배너8"></li>
-                <li class="swiper-slide"><img src="./image/report8.jpg" alt="배너8"></li>
-                <li class="swiper-slide"><img src="./image/report8.jpg" alt="배너8"></li>
-                <li class="swiper-slide"><img src="./image/report8.jpg" alt="배너8"></li>
-                <li class="swiper-slide"><img src="./image/report8.jpg" alt="배너8"></li>
-                <li class="swiper-slide"><img src="./image/report8.jpg" alt="배너8"></li>
-                <li class="swiper-slide"><img src="./image/report8.jpg" alt="배너8"></li>
-                <li class="swiper-slide"><img src="./image/report8.jpg" alt="배너8"></li>
-                <li class="swiper-slide"><img src="./image/report8.jpg" alt="배너8"></li>
-                <li class="swiper-slide"><img src="./image/report8.jpg" alt="배너8"></li>
-                <li class="swiper-slide"><img src="./image/report8.jpg" alt="배너8"></li>
-                <li class="swiper-slide"><img src="./image/report8.jpg" alt="배너8"></li>
+                <li class="swiper-slide"><img src="./image/report9.jpg" alt="배너9"></li>
+                <li class="swiper-slide"><img src="./image/report10.jpg" alt="배너10"></li>
+                <li class="swiper-slide"><img src="./image/report11.jpg" alt="배너11"></li>
+                <li class="swiper-slide"><img src="./image/report12.jpg" alt="배너12"></li>
+                <li class="swiper-slide"><img src="./image/report13.jpg" alt="배너13"></li>
             </ul>
         </div>
     </div>
@@ -631,37 +723,37 @@
                 <ul class="banner_list">
                     <li>
                         <a href="#">
-                            <div class="report_logo 1">
+                            <div class="korea_logo 1">
                                 <img src="./image/logo_1.png" alt="국민안전교육플랫폼">
                             </div>
                     </li>
                     <li>
                         <a href="#">
-                            <div class="report_logo 2">
+                            <div class="korea_logo 2">
                                 <img src="./image/logo_2.png" alt="국민참여예산">
                             </div>
                     </li>
                     <li>
                         <a href="#">
-                            <div class="report_logo 3">
+                            <div class="korea_logo 3">
                                 <img src="./image/logo_3.png" alt="문서24">
                             </div>
                     </li>
                     <li>
                         <a href="#">
-                            <div class="report_logo 4">
+                            <div class="korea_logo 4">
                                 <img src="./image/logo_4.png" alt="조달청">
                             </div>
                     </li>
                     <li>
                         <a href="#">
-                            <div class="report_logo 5">
+                            <div class="korea_logo 5">
                                 <img src="./image/logo_5.png" alt="국토교통부">
                             </div>
                     </li>
                     <li>
                         <a href="#">
-                            <div class="report_logo6">
+                            <div class="korea_logo 6">
                                 <img src="./image/logo_6.png.jpg" alt="안전신문고">
                             </div>
                     </li>
@@ -673,43 +765,59 @@
 
     <footer>
         <div id="individual">
-            <div class="inner">
-                <hr>
-                <ul>
-                    <li><a href="#"><span>개인정보처리방침 | </span></a></li>
-                    <li><a href="#">개인위치정보처리방침 | </a></li>
-                    <li><a href="#">영상기기 운영관리방침 | </a></li>
-                    <li><a href="#">이메일 집단 수집 거부  | </a></li>
-                    <li><a href="#">찾아오시는 길 | </a></li>
-                    <li><a href="#">배너방 | </a></li>
-                    <li><a href="#">한국도로공사 관련 사이트 + | </a></li>
-                    <li><a href="#">민자고속도로 바로가기 + | </a></li>
-                </ul>
-                <hr>
+    <div class="inner">
+        <ul>
+            <li><a href="#"><span class="bold">개인정보처리방침</span></a></li>
+            <li><a href="#">개인위치정보처리방침</a></li>
+            <li><a href="#">영상기기 운영관리방침</a></li>
+            <li><a href="#">이메일 집단 수집 거부</a></li>
+            <li><a href="#">찾아오시는 길</a></li>
+            <li><a href="#">배너방</a></li>
+            <li><a href="#">한국도로공사 관련 사이트 +</a></li>
+            <li><a href="#">민자고속도로 바로가기 +</a></li>
+        </ul>
+    </div>
+</div>
+
+       <div id="footer_bottom">
+    <div class="inner">
+        <div class="footer_left">
+            <img src="./image/logo_black.png" alt="로고" class="footer_logo">
+            <div class="copyright">
+                <p>우)39660 경상북도 김천시 혁신8로 77(율곡동, 한국도로공사)</p>
+                <p>COPYRIGHT © 2014 Korea Expressway Corporation. All Rights reserved.</p>
             </div>
         </div>
 
-        <div id="foot">
-            <div class="tag">
-                <p><img src="./image/logo_black.png" alt="한국도로공사 흑백로고"></p>
-                <div class="tag_end">
-                        <ul class="copyright">
-                            <li>우) 39660 경상북도 김천시 혁신8로 77(율곡동, 한국도로공사)</li>
-                            <li>COPYRIGHT © 2014 Korea Expressway Corporation. All Rights reserved.</li>
-                        </ul>
-                </div>
-           </div>
-           <div class="promote">
-            <ul class="logo">
-                <li><img src="./image/youtube.png" alt="유튜브"></li>
-                <li><img src="./image/instagram.png" alt="인스타그램"></li>
-                <li><img src="./image/facebook.png" alt="페이스북"></li>
-                <li><img src="./image/blog.png" alt="블로그"></li>
-                <li><img src="./image/post.png" alt="포스트"></li>
+        <div class="footer_right">
+            <ul class="sns_list">
+                <li><a href="#"><img src="./image/youtube.png" alt="유튜브"></a></li>
+                <li><a href="#"><img src="./image/instagram.png" alt="인스타그램"></a></li>
+                <li><a href="#"><img src="./image/facebook.png" alt="페이스북"></a></li>
+                <li><a href="#"><img src="./image/blog.png" alt="블로그"></a></li>
+                <li><a href="#"><img src="./image/post.png" alt="포스트"></a></li>
             </ul>
-           </div>
-           <div class="site">관련사이트</div>
+            
+            <div class="site_select">
+                <button type="button" id="siteBtn">관련사이트 <span class="arrow">▲</span></button>
+                <ul class="site_list">
+                    <li><a href="#">U-러닝센터</a></li>
+                    <li><a href="#">고속도로공공데이터포털</a></li>
+                    <li><a href="#">고속도로 통행료</a></li>
+                    <li><a href="#">로드플러스</a></li>
+                    <li><a href="#">유지관리CITIS</a></li>
+                    <li><a href="#">전자조달시스템</a></li>
+                    <li><a href="#">하이패스배구단</a></li>
+                    <li><a href="#">단말기등록(판매점,영업소)</a></li>
+                    <li><a href="#">기술마켓</a></li>
+                    <li><a href="#">한국도로공사서비스</a></li>
+                    <li><a href="#">결합전문기관</a></li>
+                    <li><a href="#">개인정보안심구역</a></li>
+                </ul>
+            </div>
         </div>
+    </div>
+</div>
     </footer>
 
 
@@ -740,8 +848,59 @@
 
     });
 
+    const subjectswiper = new Swiper('.swiper.subject', {
+    // 기본 설정들...
+    loop: true,
+    
+    // 네비게이션 화살표 연결 (중요!)
+    navigation: {
+        nextEl: '#afterlike .swiper-button-next', // ID나 클래스 경로를 정확히 작성
+        prevEl: '#afterlike .swiper-button-prev',
+    },
+});
 
 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const zoomButtons = document.querySelectorAll('.zoom-list button');
+    const resetBtn = document.querySelector('.reset-btn');
+
+    // 1. 화면 크기 조절 기능
+    zoomButtons.forEach((btn, index) => {
+        btn.addEventListener('click', function() {
+            // 버튼 활성화 스타일 변경
+            document.querySelectorAll('.zoom-list li').forEach(li => li.classList.remove('active'));
+            this.parentElement.classList.add('active');
+
+            // 클릭한 버튼에 따라 배율 설정 (작게: 90%, 보통: 100%, 조금 크게: 110%, 크게: 120%)
+            const zoomLevels = ['90%', '100%', '110%', '120%'];
+            document.body.style.zoom = zoomLevels[index];
+        });
+    });
+
+    // 2. 초기화 기능 (100%로 복구)
+    resetBtn.addEventListener('click', function() {
+        document.body.style.zoom = '100%';
+        
+        // 스타일 초기화 (보통 항목을 active로)
+        document.querySelectorAll('.zoom-list li').forEach(li => li.classList.remove('active'));
+        document.querySelectorAll('.zoom-list li')[1].classList.add('active');
+    });
+});
+
+
+const zoomItems = document.querySelectorAll('.zoom-layer ul li');
+
+zoomItems.forEach((li) => {
+    li.addEventListener('click', function() {
+        // 1. 모든 li에서 active 클래스를 제거합니다.
+        zoomItems.forEach(item => item.classList.remove('active'));
+        
+        // 2. 현재 클릭한 li에만 active 클래스를 추가합니다.
+        this.classList.add('active');
+    });
+});
 
      // 1) Swiper 초기화
     const famousSwiper = new Swiper(".famous-swiper", {
@@ -839,66 +998,85 @@ document.querySelector('#a1').dispatchEvent(new Event('change'));
 
 
 
-  const reportSwiper = new Swiper(".report_logo.swiper", {
-    loop: true,
-    speed: 600,
+  
 
-    // 4개 노출
-    slidesPerView: 4,
+
+
+const reportSwiper = new Swiper('.report_logo', {
+    slidesPerView: 'auto',
     spaceBetween: 20,
+    loop: true,
+    
+    // 직접 조작 시 어긋남 방지 핵심
+    roundLengths: true,
+    centeredSlides: false,
+    resistanceRatio: 0, // 끝부분 저항을 없애서 딱 붙게 함
 
-    // 자동재생
     autoplay: {
-      delay: 3500,
-      disableOnInteraction: false, // 버튼 눌러도 계속
-      pauseOnMouseEnter: true      // 마우스 올리면 잠깐 멈춤(원하면 false)
+        delay: 3000,
+        disableOnInteraction: false,
     },
 
-    // 컨트롤 연결
-    navigation: {
-      nextEl: "#report .swiper-button-next",
-      prevEl: "#report .swiper-button-prev",
-    },
     pagination: {
-      el: ".swiper-pagination-report",
-      type: "fraction",
-      renderFraction: function (currentClass, totalClass) {
-        return `<span class="${currentClass}"></span>/<span class="${totalClass}"></span>`;
-      },
-      formatFractionCurrent: (n) => String(n).padStart(2, "0"),
-      formatFractionTotal: (n) => String(n).padStart(2, "0"),
+        el: '.swiper-pagination-report',
+        type: 'fraction',
+        renderFraction: function (currentClass, totalClass) {
+            return '<span class="' + currentClass + '"></span>' +
+                   '/' +
+                   '<span class="' + totalClass + '"></span>';
+        }
     },
 
-    // 반응형 (필요시 수치만 조정)
-    breakpoints: {
-      0:    { slidesPerView: 1.2, spaceBetween: 14 },
-      480:  { slidesPerView: 2,   spaceBetween: 16 },
-      768:  { slidesPerView: 3,   spaceBetween: 18 },
-      1024: { slidesPerView: 4,   spaceBetween: 20 },
+    navigation: {
+        nextEl: '.swiper-button-next-report',
+        prevEl: '.swiper-button-prev-report',
     },
-  });
+});
 
-  // 일시정지/재생 토글
-  const pauseBtn = document.querySelector("#report .btn_pause");
-  let isPaused = false;
-
-  pauseBtn.addEventListener("click", () => {
-    if (!reportSwiper.autoplay) return;
-
-    if (!isPaused) {
-      reportSwiper.autoplay.stop();
-      pauseBtn.textContent = "▶";
-      pauseBtn.setAttribute("aria-label", "재생");
-      pauseBtn.classList.add("is-paused");
-      isPaused = true;
+// 재생/일시정지 기능
+document.querySelector('.btn_pause').addEventListener('click', function() {
+    const icon = this.querySelector('i');
+    if (icon.classList.contains('xi-pause')) {
+        reportSwiper.autoplay.stop();
+        icon.classList.replace('xi-pause', 'xi-play');
     } else {
-      reportSwiper.autoplay.start();
-      pauseBtn.textContent = "||";
-      pauseBtn.setAttribute("aria-label", "일시정지");
-      pauseBtn.classList.remove("is-paused");
-      isPaused = false;
+        reportSwiper.autoplay.start();
+        icon.classList.replace('xi-play', 'xi-pause');
     }
-  });
+});
+
+
+function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        window.addEventListener("load", reveal);
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const siteBtn = document.getElementById('siteBtn');
+    const siteSelect = document.querySelector('.site_select');
+
+    // 1. 버튼 클릭 시 메뉴 보이기/숨기기
+    siteBtn.addEventListener('click', function(e) {
+        e.stopPropagation(); // 클릭 이벤트가 위로 퍼지는 것을 막음
+        siteSelect.classList.toggle('active'); // .active 클래스를 넣었다 뺐다 함
+    });
+
+    // 2. 다른 곳 클릭하면 메뉴 닫기
+    document.addEventListener('click', function() {
+        siteSelect.classList.remove('active');
+    });
+});
     </script>
 
 </body>
