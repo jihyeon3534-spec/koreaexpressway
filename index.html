@@ -32,7 +32,8 @@
             
             <div class="zoom-layer">
                 <div class="zoom-header">화면크기 조절</div>
-                <ul class="zoom-list"> <li><button type="button"><span>가</span> 작게</button></li>
+                <ul class="zoom-list"> 
+                    <li><button type="button"><span>가</span> 작게</button></li>
                     <li><button type="button"><span>가</span> 보통</button></li>
                     <li><button type="button"><span>가</span> 조금 크게</button></li>
                     <li><button type="button"><span>가</span> 크게</button></li>
@@ -130,6 +131,14 @@
 
     <main>
         <section id="main_view">
+            <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url(./image/main_view1.jpg);"></div>
+                <div class="swiper-slide" style="background-image: url(./image/main_view2.jpg);"></div>
+                <div class="swiper-slide" style="background-image: url(./image/main_view3.jpg);"></div>
+                <div class="swiper-slide" style="background-image: url(./image/main_view4.jpg);"></div>
+            </div>
+            </div>
             <div class="inner">
                 <h2>안전하고 편리한 미래교통 플랫폼 기업</h2>
                 <p>국민과 함께 만드는 스마트 고속도로 플랫폼 열린 정보와 투명한 운영으로 실현합니다.</p>
@@ -1077,6 +1086,16 @@ document.addEventListener('DOMContentLoaded', function() {
         siteSelect.classList.remove('active');
     });
 });
+
+var myswiper = new Swiper(".mySwiper", {
+    loop: true,
+    effect: "fade", // 부드럽게 겹치며 바뀌는 효과
+    autoplay: {
+        delay: 5000, // 5초마다 교체
+        disableOnInteraction: false,
+    },
+});
+
     </script>
 
 </body>
